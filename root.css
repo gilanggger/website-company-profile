@@ -1,0 +1,41 @@
+:root {
+    --navbar-color: #272727;
+
+    --home-color-1: #D3DEF4;
+    --home-color-2: #1B1B1B;
+    --home-color-3: #F4E4D4;
+    --home-color-4: linear-gradient(#131115, #3D1D56);
+
+    --aboutus-color-1: #D3DEF4;
+    --aboutus-color-2: #D3EFF3;
+    --aboutus-color-3: #D3F4DF;
+    --aboutus-color-4: #F0F4D3;
+    --aboutus-color-5: #D3DEF4;
+
+    --character-color-1: #FBEFEF;
+    --character-color-2: #FAF3E1;
+    --character-color-3: #E6FAE1;
+    --character-color-4: #FAF0FB;
+    --character-color-5: #E4FAF8;
+    --character-color-6: #F0F4FF;
+
+    --product-color-1: #1B1B1B;
+    --product-color-2: #D2E1F4;
+    --product-color-3: #D2F4D3;
+    --product-color-4: #F4E4D4;
+    --product-color-5: #F4D3E8;
+    --product-color-6: #F4EFD2;
+
+    --company-color-1: #D3DEF4;
+    --company-color-2: #2F2F2F;
+    --company-color-3: #A3BCDB;
+    --company-color-4: #D3DEF4;
+
+    --text-color-1: #ffd200;
+    --text-color-2: #ffe400;
+
+    --font-title-1: 25px;
+    --font-title-2: 30px;
+    --font-title-3: 35px;
+    --font-title-4: 40px;
+}
