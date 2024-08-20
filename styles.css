@@ -5,9 +5,9 @@
 
 /* Styling navbar links */
 .navbar-dark .navbar-nav .nav-link {
-    color: #fff;
+    color: #868686;
     font-weight: 500;
-    font-size: 10px; /* Ukuran font untuk link navbar */
+    font-size: 16px; /* Ukuran font untuk link navbar */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -49,7 +49,7 @@ h2 {
 /* Container untuk gelombang */
 .wave-container {
     width: 100%;
-    height: 100px; /* Tinggi gelombang */
+    height: 180px; /* Tinggi gelombang */
 }
 
 /* Styling SVG dalam gelombang */
@@ -64,7 +64,7 @@ h2 {
 
 /* Styling untuk logo navbar */
 .navbar-brand img {
-    max-height: 30px; /* Sesuaikan dengan tinggi teks navbar */
+    max-height: 50px; /* Sesuaikan dengan tinggi teks navbar */
     width: auto; /* Menjaga proporsi gambar */
 }
 
@@ -75,3 +75,62 @@ h2 {
     align-items: center;
 }
 
+
+.wave-footer {
+    width: 100%;
+    height: 200px;
+    background-image: url(svg/wave-footer1.svg);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+
+.see-more-button {
+    background-image: url("button.svg"); /* Replace with your image path */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 105px;
+    /* Ubah widthnya untuk menyesuaikan ukuran aslinya */
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.see-more-button-1 {
+    background-image: url("button-1.svg"); /* Replace with your image path */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 105px;
+    /* Ubah widthnya untuk menyesuaikan ukuran aslinya */
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.submit-button {
+    background-image: url("submit-button.svg"); /* Replace with your image path */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 105px;
+    /* Ubah widthnya untuk menyesuaikan ukuran aslinya */
+    height: 81px;
+    font-weight: bold;
+    cursor: pointer;  
+}
+
+.wave-footer {
+    width: 100%;
+    height: 200px;
+    background-image: url(wave1.svg);
+    background-repeat: repeat;
+    background-size: contain;
+}
