@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import React from "react";
-import LogoBrand from "@/public/logo.png";
+import LogoBrand from "../public/logo.png";
 import Image from "next/image";
 
 const Navbar = () => {
