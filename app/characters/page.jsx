@@ -1,22 +1,34 @@
 import React from "react";
 import { charactersData } from "../../data/characters";
 import Image from "next/image";
+import { cn } from "../../lib/utils";
+import { luckiest_guy } from "../fonts";
 
 const CharactersPage = () => {
-  const dataGenap = charactersData.filter((data) => data.id % 2 === 0);
-  const dataGanjil = charactersData.filter((data) => data.id % 2 !== 0);
-
   return (
-    <div className="flex flex-col justify-center items-center">
-      {/* Togar */}
-      <div className="flex flex-col max-w-6xl border border-red-500">
-        {dataGanjil.map((data) => (
-          <div key={data.id} className="flex flex-row">
-            <Image src={data.image} width={500} height={500} alt={data.name} />
-            <div className="flex flex-col">
-              <h2>{data.name}</h2>
+    <>
+      {charactersData.map((data) => (
+        <div
+          key={data.id}
+          className={cn(
+            "flex flex-col justify-center items-center",
+            data.id === 1 ? "bg-[#FBEFEF]" : "",
+            data.id === 2 ? "bg-[#FAF3E1]" : "",
+            data.id === 3 ? "bg-[#E5FAE1]" : "",
+            data.id === 4 ? "bg-[#FAF0FB]" : "",
+            data.id === 5 ? "bg-[#E4FAF8]" : "",
+            data.id === 6 ? "bg-[#F0F4FF]" : "",
+            data.id === 7 ? "bg-[#FEF4EB]" : "",
+            data.id === 8 ? "bg-[#EBF9E8]" : "",
+            data.id === 9 ? "bg-[#FBEFEF]" : "",
+            data.id === 10 ? "bg-[#EAF9E8]" : ""
+          )}>
+          <div className={cn("flex flex-row justify-center items-center  max-w-6xl")}>
+            <Image src={data.image} alt={data.name} width={500} height={500} className={cn(data.id % 2 === 0 ? "order-2" : "order-1", "border")} />
+            <div className={cn("flex flex-col tracking-wide", data.id % 2 === 0 ? "order-1 text-right" : "order-2 text-left")}>
+              <h2 className={cn(luckiest_guy.className, "text-6xl font-bold py-4")}>{data.name}</h2>
               <p>{data.description}</p>
-              <div className="flex flex-row">
+              <div className={cn("flex flex-row", data.id % 2 === 0 ? "justify-end" : "justify-start")}>
                 <p>Strong: {data.strong}</p>
                 <p>Logic: {data.logic}</p>
                 <p>Creative: {data.creative}</p>
@@ -24,9 +36,9 @@ const CharactersPage = () => {
               </div>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      ))}
+    </>
   );
 };
 

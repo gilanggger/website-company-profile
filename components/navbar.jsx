@@ -10,9 +10,9 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <div className="flex justify-center items-center w-full top-0 bg-black">
+    <div className="flex justify-center items-center w-full top-0 stripe-bg">
       <div className={cn("")}>
-        <ul className="flex flex-row gap-x-4 items-center ">
+        <ul className="flex flex-row gap-x-4 items-center font-semibold">
           <li className="cursor-pointer py-2 px-4">About Us</li>
           <li className="cursor-pointer py-2 px-4">The Story of</li>
           <li className="cursor-pointer py-2 px-4" onClick={() => router.push("/characters")}>

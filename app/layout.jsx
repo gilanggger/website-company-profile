@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { poppins } from "./fonts";
+import { cn } from "../lib/utils";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={cn(poppins.className)}>
         <Navbar />
         {children}
         <Footer />
