@@ -24,7 +24,9 @@ const CharactersPage = () => {
             data.id === 10 ? "bg-[#EAF9E8]" : ""
           )}>
           <div className={cn("flex flex-row justify-center items-center  max-w-6xl")}>
-            <Image src={data.image} alt={data.name} width={500} height={500} className={cn(data.id % 2 === 0 ? "order-2" : "order-1", "border")} />
+            <div className={cn(data.id % 2 === 0 ? "order-2" : "order-1", "border w-[300px] h-[300px]")}>
+              <Image src={data.image} alt={data.name} width={500} height={500} />
+            </div>
             <div className={cn("flex flex-col tracking-wide", data.id % 2 === 0 ? "order-1 text-right" : "order-2 text-left")}>
               <h2 className={cn(luckiest_guy.className, "text-6xl font-bold py-4")}>{data.name}</h2>
               <p>{data.description}</p>
