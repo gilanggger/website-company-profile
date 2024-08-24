@@ -13,7 +13,9 @@ const Navbar = () => {
     <div className="md:flex justify-center items-center w-full top-0 stripe-bg hidden">
       <div className={cn("")}>
         <ul className="flex flex-row gap-x-4 items-center font-semibold">
-          <li className="cursor-pointer py-2 px-4">About Us</li>
+          <li className="cursor-pointer py-2 px-4" onClick={() => router.push("/about")}>
+            About Us
+          </li>
           <li className="cursor-pointer py-2 px-4" onClick={() => router.push("/story")}>
             The Story of
           </li>
@@ -26,8 +28,12 @@ const Navbar = () => {
           <li className="cursor-pointer py-2 px-4" onClick={() => router.push("/product")}>
             Our Product
           </li>
-          <li className="cursor-pointer py-2 px-4">Company</li>
-          <li className="cursor-pointer py-2 px-4">Contact Us</li>
+          <li className="cursor-pointer py-2 px-4" onClick={() => router.push("/company")}>
+            Company
+          </li>
+          <li className="cursor-pointer py-2 px-4" onClick={() => router.push("/contact")}>
+            Contact Us
+          </li>
         </ul>
       </div>
     </div>

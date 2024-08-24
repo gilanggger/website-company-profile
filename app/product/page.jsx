@@ -188,6 +188,7 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
+      {/* //TODOS: Create 2 MORE PRODUCT */}
     </div>
   );
 };
