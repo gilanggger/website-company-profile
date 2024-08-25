@@ -6,6 +6,7 @@ import Minggus from "../public/Minggus.png";
 import Wave from "../public/wave.svg";
 import Wave1 from "../public/wave-1.svg";
 import { Assets } from "../components/ui/assets";
+import Contact from "../components/contact";
 
 export default function Home() {
   return (
@@ -126,20 +127,11 @@ export default function Home() {
             </h2>
             <p className="text-2xl text-[#d2def4]">How can we help you?</p>
           </div>
-          <div className="flex flex-col basis-1/2 gap-2">
-            <input type="text" placeholder="Name" className="bg-transparent border rounded p-2 text-[#d2def4]" />
-            <input type="email" placeholder="Email" className="bg-transparent border rounded  text-[#d2def4] p-2" />
-            <input type="text" placeholder="Subject" className="bg-transparent border rounded  text-[#d2def4] p-2" />
-            <input type="text" placeholder="Message" className="bg-transparent border rounded  text-[#d2def4] p-2 pb-24" />
-            <Button.Primary className="uppercase w-fit font-bold shadow-md mt-6">Submit</Button.Primary>
+          <div className="flex flex-col basis-1/2">
+            <Contact />
           </div>
         </div>
       </div>
-
-      {/* Test */}
-      {/* <div className="stripe-bg h-screen w-full">
-        <h1 className="text-center text-black ">Welcome to My App</h1>
-      </div> */}
     </div>
   );
 }
