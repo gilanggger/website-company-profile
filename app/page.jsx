@@ -1,7 +1,7 @@
 import { cn } from "../lib/utils";
 import Image from "next/image";
 import { luckiest_guy } from "./fonts";
-import Button, { ButtonStyle } from "../components/ui/button";
+import { Button } from "../components/ui/button";
 import Minggus from "../public/Minggus.png";
 import Wave from "../public/wave.svg";
 import Wave1 from "../public/wave-1.svg";
@@ -27,7 +27,7 @@ export default function Home() {
             menciptakan tokoh animasi fiksi
           </p>
           <p>dari perpaduan topeng dan buah lemon yang banyak manfaat bagi kesehatan.</p>
-          <ButtonStyle.Primary className="uppercase w-fit font-bold shadow-md mt-8 mb-24">See More</ButtonStyle.Primary>
+          <Button.Primary className="uppercase w-fit font-bold shadow-md mt-8 mb-24">See More</Button.Primary>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ export default function Home() {
               Suatu malam, Kakek yang baik hati ini bermimpi. di dalam mimpinya ia melihat 6 topengnya hidup dan menjelma menjadi karakter anak-anak
               dengan tubuh buah lemon yang ia sebut MINILEMON.
             </p>
-            <ButtonStyle.Secondary className="uppercase w-fit font-bold shadow-md">See More</ButtonStyle.Secondary>
+            <Button.Secondary className="uppercase w-fit font-bold shadow-md">See More</Button.Secondary>
           </div>
           <div className="flex flex-col basis-1/2">
             <h2
@@ -69,7 +69,7 @@ export default function Home() {
             <div className="h-[500px] lg:w-[500px] w-[100px] relative">
               <Image src={Minggus} fill sizes="100vw" style={{ objectFit: "none" }} alt="Characters" className="z-10" />
             </div>
-            <ButtonStyle.Secondary className="uppercase w-fit font-bold shadow-md self-center">See More</ButtonStyle.Secondary>
+            <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center">See More</Button.Secondary>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function Home() {
             <div className="h-[500px] lg:w-[350px] w-[50px] bg-black"></div>
             <div className="h-[500px] lg:w-[350px] w-[50px] bg-black"></div>
           </div>
-          <ButtonStyle.Secondary className="uppercase w-fit font-bold shadow-md self-center">See More</ButtonStyle.Secondary>
+          <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center">See More</Button.Secondary>
         </div>
       </div>
 
@@ -108,7 +108,7 @@ export default function Home() {
             PT. Minilemon Nusantara adalah perusahaan yang berdomisili di Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan Karakter
             Anak dan nilai-nilai kebaikan melalui berbagai Program Pendidikan berbasis seni, hiburan dan teknologi.
           </p>
-          <ButtonStyle.Secondary className="uppercase w-fit font-bold shadow-md ">See More</ButtonStyle.Secondary>
+          <Button.Secondary className="uppercase w-fit font-bold shadow-md ">See More</Button.Secondary>
         </div>
       </div>
 
@@ -128,10 +128,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col basis-1/2 gap-2">
             <input type="text" placeholder="Name" className="bg-transparent border rounded p-2 text-[#d2def4]" />
-            <input type="email" placeholder="Email" className="bg-transparent border rounded  text-[#d2def4] Ap-2" />
+            <input type="email" placeholder="Email" className="bg-transparent border rounded  text-[#d2def4] p-2" />
             <input type="text" placeholder="Subject" className="bg-transparent border rounded  text-[#d2def4] p-2" />
             <input type="text" placeholder="Message" className="bg-transparent border rounded  text-[#d2def4] p-2 pb-24" />
-            <ButtonStyle.Primary className="uppercase w-fit font-bold shadow-md ">Submit</ButtonStyle.Primary>
+            <Button.Primary className="uppercase w-fit font-bold shadow-md mt-6">Submit</Button.Primary>
           </div>
         </div>
       </div>
