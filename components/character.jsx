@@ -4,20 +4,57 @@ import { Placeholder } from "placeholder";
 import React, { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { luckiest_guy } from "../app/fonts";
+import { Assets } from "./ui/assets";
 
 const Character = ({ id, name, description, image, strong, logic, creative, luck }) => {
-  const [value, setValue] = useState(0);
+  const [valStrong, setValStrong] = useState(0);
+  const [valCreative, setValCreative] = useState(0);
+  const [valLuck, setValLuck] = useState(0);
+  const [valLogic, setValLogic] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (value < strong) {
-        setValue(value + 1);
+      if (valStrong < strong) {
+        setValStrong(valStrong + 1);
       } else {
         clearInterval(interval);
       }
     }, 50);
     return () => clearInterval(interval);
-  }, [value]);
+  }, [valStrong]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (valCreative < creative) {
+        setValCreative(valCreative + 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, 50);
+    return () => clearInterval(interval);
+  }, [valCreative]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (valLuck < luck) {
+        setValLuck(valLuck + 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, 50);
+    return () => clearInterval(interval);
+  }, [valLuck]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (valLogic < logic) {
+        setValLogic(valLogic + 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, 50);
+    return () => clearInterval(interval);
+  }, [valLogic]);
 
   return (
     <div
@@ -35,12 +72,20 @@ const Character = ({ id, name, description, image, strong, logic, creative, luck
         id === 9 ? "bg-[#FBEFEF]" : "",
         id === 10 ? "bg-[#EAF9E8]" : ""
       )}>
-      <div className="container ">
-        <div className={cn("flex flex-row justify-center max-w-6xl gap-x-6 py-12")}>
-          <div className={cn(id % 2 === 0 ? "order-2" : "order-1", " basis-4/12 flex justify-center items-center")}>
+      <div className="container px-8 md:px-0">
+        <div className={cn("flex flex-col md:flex-row justify-center max-w-6xl gap-x-6 py-12")}>
+          <div className={cn(id % 2 === 0 ? "md:order-2" : "md:order-1", " basis-4/12 flex flex-col justify-center items-center")}>
+            <h2
+              className={cn(
+                luckiest_guy.className,
+                "text-4xl bg-gradient-to-b md:hidden from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-transparent items-center text-wrap",
+                "drop-shadow-[0px_5px_0px_rgba(49,49,49,1)]"
+              )}>
+              {name}
+            </h2>
             <Placeholder height={500} width={350} color="#d2def4" background="#333" />
           </div>
-          <div className={cn("flex flex-col  tracking-wide basis-8/12", id % 2 === 0 ? "order-1 text-right" : "order-2 text-left")}>
+          <div className={cn("flex flex-col  tracking-wide basis-8/12", id % 2 === 0 ? "md:order-1 md:text-right" : "md:order-2 md:text-left")}>
             <h2
               className={cn(
                 luckiest_guy.className,
@@ -59,32 +104,72 @@ const Character = ({ id, name, description, image, strong, logic, creative, luck
               {name}
             </h2>
             <p className="tracking-widest leading-loose">{description}</p>
-            <div className={cn("flex flex-col", id % 2 === 0 ? "justify-end" : "justify-start")}>
-              <div className="">
-                {strong}
-                <div className="relative w-full max-w-[200px] h-6 bg-muted rounded-full overflow-hidden">
-                  <div className="absolute inset-y-0 left-0 bg-gradient-to-b from-[#fef085] to-[#ffa914] h-full" style={{ width: `${value}%` }} />
-                  <div
-                    className="absolute inset-y-0 left-0 w-6 h-6 bg-[#047edb] rounded-full shadow-md transform -translate-x-1/2 transition-transform duration-500"
-                    style={{ left: `${value}%` }}>
-                    <div className="absolute">
-                      <svg
-                        className="w-full h-full text-black"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                      </svg>
+            <div className={cn("flex flex-col gap-6", id % 2 === 0 ? "justify-end" : "justify-start")}>
+              <div className="flex flex-row justify-between items-center md:gap-x-24 gap-x-10">
+                {/* //TODOS: Create components */}
+                {/* Strong */}
+                <div className="flex flex-col basis-1/2">
+                  <p className={cn("pl-4 font-semibold italic uppercase text-start")}>Strong</p>
+                  <div className="relative rounded-full p-2 max-w-full bg-[#ededed]">
+                    <div className="relative w-full max-w-full p-2 bg-muted rounded-full overflow-hidden ">
+                      <div
+                        className="absolute inset-y-0 left-0 bg-gradient-to-b from-[#fef085] to-[#ffa914] h-full"
+                        style={{ width: `${valStrong}%` }}
+                      />
+                    </div>
+                    <div className="absolute top-0 " style={{ left: `${valStrong}%` }}>
+                      <Assets.IconSlider className="h-8 w-8 absolute -left-4" />
+                    </div>
+                  </div>
+                </div>
+                {/* Creative */}
+                <div className="flex flex-col basis-1/2">
+                  <p className={cn("pl-4 font-semibold italic uppercase text-start")}>Creative</p>
+                  <div className="relative rounded-full p-2 max-w-full bg-[#ededed]">
+                    <div className="relative w-full max-w-full p-2 bg-muted rounded-full overflow-hidden ">
+                      <div
+                        className="absolute inset-y-0 left-0 bg-gradient-to-b from-[#fef085] to-[#ffa914] h-full"
+                        style={{ width: `${valCreative}%` }}
+                      />
+                    </div>
+                    <div className="absolute top-0 " style={{ left: `${valCreative}%` }}>
+                      <Assets.IconSlider className="h-8 w-8 absolute -left-4" />
                     </div>
                   </div>
                 </div>
               </div>
-              <p>Logic: {logic}</p>
-              <p>Creative: {creative}</p>
-              <p>Luck: {luck}</p>
+              <div className="flex flex-row justify-between items-center md:gap-x-24 gap-x-10">
+                {/* Logic */}
+                <div className="flex flex-col basis-1/2">
+                  <p className={cn("pl-4 font-semibold italic uppercase text-start")}>Logic</p>
+                  <div className="relative rounded-full p-2 max-w-full bg-[#ededed]">
+                    <div className="relative w-full max-w-full p-2 bg-muted rounded-full overflow-hidden ">
+                      <div
+                        className="absolute inset-y-0 left-0 bg-gradient-to-b from-[#fef085] to-[#ffa914] h-full"
+                        style={{ width: `${valLogic}%` }}
+                      />
+                    </div>
+                    <div className="absolute top-0 " style={{ left: `${valLogic}%` }}>
+                      <Assets.IconSlider className="h-8 w-8 absolute -left-4" />
+                    </div>
+                  </div>
+                </div>
+                {/* Luck */}
+                <div className="flex flex-col basis-1/2">
+                  <p className={cn("pl-4 font-semibold italic uppercase text-start")}>Luck</p>
+                  <div className="relative rounded-full p-2 max-w-full bg-[#ededed]">
+                    <div className="relative w-full max-w-full p-2 bg-muted rounded-full overflow-hidden ">
+                      <div
+                        className="absolute inset-y-0 left-0 bg-gradient-to-b from-[#fef085] to-[#ffa914] h-full"
+                        style={{ width: `${valLuck}%` }}
+                      />
+                    </div>
+                    <div className="absolute top-0 " style={{ left: `${valLuck}%` }}>
+                      <Assets.IconSlider className="h-8 w-8 absolute -left-4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
