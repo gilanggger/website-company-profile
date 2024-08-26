@@ -7,6 +7,7 @@ import Wave from "../public/wave.svg";
 import Wave1 from "../public/wave-1.svg";
 import { Assets } from "../components/ui/assets";
 import Contact from "../components/contact";
+import { Placeholder } from "placeholder";
 
 export default function Home() {
   return (
@@ -38,7 +39,7 @@ export default function Home() {
         <Assets.WaveMd className="absolute hidden md:block xl:hidden -top-24 w-full -z-0" />
         <Assets.WaveLg className="absolute hidden lg:block -top-32 w-full -z-0" />
         <Assets.WaveSm className="absolute block -top-24 md:hidden w-full -z-0" />
-        <div className=" mt-20 container flex lg:flex-row flex-col gap-20 z-10">
+        <div className=" my-20 container flex lg:flex-row flex-col gap-20 z-10">
           <div className="flex flex-col gap-y-12 basis-1/2 z-10">
             <h2
               className={cn(
@@ -67,8 +68,8 @@ export default function Home() {
               )}>
               Characters
             </h2>
-            <div className="h-[500px] lg:w-[500px] w-[100px] relative">
-              <Image src={Minggus} fill sizes="100vw" style={{ objectFit: "none" }} alt="Characters" className="z-10" />
+            <div className="z-10 flex justify-center items-center">
+              <Placeholder height={400} width={350} color="#333" />
             </div>
             <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center">See More</Button.Secondary>
           </div>

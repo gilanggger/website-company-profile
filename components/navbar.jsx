@@ -64,19 +64,19 @@ const Navbar = () => {
       <div className={cn("")}>
         <ul className="flex flex-row gap-x-3 lg:gap-x-4 items-center font-semibold my-4">
           <li
-            className={cn("flex flex-row items-center cursor-pointer", pathname === "/about" ? "text-[#ffd201]" : "")}
+            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/about" ? "text-[#ffd201]" : "")}
             onClick={() => router.push("/about")}>
             <GiDoorway className="h-6 w-6 mr-1 md:hidden lg:block" />
             About Us
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer", pathname === "/story" ? "text-[#ffd201]" : "")}
+            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/story" ? "text-[#ffd201]" : "")}
             onClick={() => router.push("/story")}>
             <FaBookOpen className="h-6 w-6 mr-1 md:hidden lg:block" />
             The Story of
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer", pathname === "/characters" ? "text-[#ffd201]" : "")}
+            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/characters" ? "text-[#ffd201]" : "")}
             onClick={() => router.push("/characters")}>
             <FaLemon className="h-6 w-6 mr-1 md:hidden lg:block" />
             Characters
@@ -93,19 +93,19 @@ const Navbar = () => {
             />
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer", pathname === "/product" ? "text-[#ffd201]" : "")}
+            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/product" ? "text-[#ffd201]" : "")}
             onClick={() => router.push("/product")}>
             <BsBox className="h-6 w-6 mr-1 md:hidden lg:block" />
             Our Product
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer", pathname === "/company" ? "text-[#ffd201]" : "")}
+            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/company" ? "text-[#ffd201]" : "")}
             onClick={() => router.push("/company")}>
             <FaFlag className="h-6 w-6 mr-1 md:hidden lg:block" />
             Company
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer", pathname === "/contact" ? "text-[#ffd201]" : "")}
+            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/contact" ? "text-[#ffd201]" : "")}
             onClick={() => router.push("/contact")}>
             <BsCursorFill className="h-6 w-6 mr-1 md:hidden lg:block" />
             Contact Us

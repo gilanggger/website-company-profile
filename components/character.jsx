@@ -1,8 +1,24 @@
+"use client";
+
 import { Placeholder } from "placeholder";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
+import { luckiest_guy } from "../app/fonts";
 
 const Character = ({ id, name, description, image, strong, logic, creative, luck }) => {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (value < strong) {
+        setValue(value + 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, 50);
+    return () => clearInterval(interval);
+  }, [value]);
+
   return (
     <div
       key={id}
@@ -45,7 +61,8 @@ const Character = ({ id, name, description, image, strong, logic, creative, luck
             <p className="tracking-widest leading-loose">{description}</p>
             <div className={cn("flex flex-col", id % 2 === 0 ? "justify-end" : "justify-start")}>
               <div className="">
-                <div className="relative w-full max-w-[400px] h-6 bg-muted rounded-full overflow-hidden">
+                {strong}
+                <div className="relative w-full max-w-[200px] h-6 bg-muted rounded-full overflow-hidden">
                   <div className="absolute inset-y-0 left-0 bg-gradient-to-b from-[#fef085] to-[#ffa914] h-full" style={{ width: `${value}%` }} />
                   <div
                     className="absolute inset-y-0 left-0 w-6 h-6 bg-[#047edb] rounded-full shadow-md transform -translate-x-1/2 transition-transform duration-500"
@@ -64,7 +81,6 @@ const Character = ({ id, name, description, image, strong, logic, creative, luck
                     </div>
                   </div>
                 </div>
-                {strong}
               </div>
               <p>Logic: {logic}</p>
               <p>Creative: {creative}</p>
