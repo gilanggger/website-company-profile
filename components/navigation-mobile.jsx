@@ -57,7 +57,7 @@ const NavigationMobile = () => {
   };
 
   return (
-    <div className="sticky px-4 py-2 bottom-5 md:hidden z-50 justify-center items-center flex">
+    <div className="fixed px-4 py-2 bottom-5 inset-x-0 md:hidden z-50 justify-center items-center flex">
       <div className="w-fit bg-white flex flex-row items-center justify-center rounded-full px-4 gap-x-2">
         <HiChevronDoubleLeft
           className={cn("h-8 w-8", pathname === "/" ? "text-gray-300" : "text-gray-700 hover:cursor-pointer")}

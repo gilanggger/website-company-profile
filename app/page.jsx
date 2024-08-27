@@ -14,7 +14,7 @@ export default function Home() {
     <div className=" flex items-center flex-col justify-center ">
       {/* Section 1 */}
       <div className="bg-gradient-to-b from-[#0a040e] to-[#3a1c52] text-[#d0dff4] w-full">
-        <div className="container flex flex-col mt-20">
+        <div className="container px-10 md:px-0 flex flex-col mt-20">
           <p className="uppercase font-bold text-xl tracking-wide">welcome to</p>
           <h1
             className={cn(
@@ -39,7 +39,7 @@ export default function Home() {
         <Assets.WaveMd className="absolute hidden md:block xl:hidden -top-24 w-full -z-0" />
         <Assets.WaveLg className="absolute hidden lg:block -top-32 w-full -z-0" />
         <Assets.WaveSm className="absolute block -top-24 md:hidden w-full -z-0" />
-        <div className=" my-20 container flex lg:flex-row flex-col gap-20 z-10">
+        <div className="my-20 container flex lg:flex-row flex-col gap-20 px-10 md:px-0 z-10">
           <div className="flex flex-col gap-y-12 basis-1/2 z-10">
             <h2
               className={cn(
@@ -78,7 +78,7 @@ export default function Home() {
 
       {/* Product */}
       <div className="flex flex-col w-full bg-[#1b1b1b]">
-        <div className="flex flex-col items-center justify-center my-20 gap-10">
+        <div className="flex flex-col items-center justify-center my-20 gap-10 px-10 md:px-0 container">
           <h2
             className={cn(
               luckiest_guy.className,
@@ -87,17 +87,23 @@ export default function Home() {
             Our Product
           </h2>
           <div className="flex flex-row gap-4">
-            <div className="h-[500px] lg:w-[350px] w-[50px] bg-black"></div>
-            <div className="h-[500px] lg:w-[350px] w-[50px] bg-black"></div>
-            <div className="h-[500px] lg:w-[350px] w-[50px] bg-black"></div>
+            <div className="hidden md:flex">
+              <Placeholder height={450} width={300} color="#333" />
+            </div>
+            <div className="flex">
+              <Placeholder height={450} width={300} color="#333" />
+            </div>
+            <div className="hidden md:flex">
+              <Placeholder height={450} width={300} color="#333" />
+            </div>
           </div>
           <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center">See More</Button.Secondary>
         </div>
       </div>
 
       {/* Company */}
-      <div className="w-full flex flex-col bg-[#f4e4d4] ">
-        <div className="flex flex-col gap-6 container my-20">
+      <div className="w-full flex flex-col bg-[#f4e4d4]">
+        <div className="flex flex-col gap-6 container my-20 px-10 md:px-0">
           <h2
             className={cn(
               luckiest_guy.className,
@@ -116,7 +122,7 @@ export default function Home() {
 
       {/* Contact Us */}
       <div className="w-full bg-[#1b1b1b] flex flex-row">
-        <div className="flex lg:flex-row flex-col gap-12 container my-20">
+        <div className="flex lg:flex-row flex-col gap-12 container my-20 px-10 md:px-0">
           <div className="flex justify-center items-center flex-col basis-1/2">
             <h2
               className={cn(
