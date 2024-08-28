@@ -96,7 +96,7 @@ const CompanyPage = () => {
               </h2>
             </div>
             <p>
-              <b>Reno Galsamer</b> Adalah Pria yang lahir dan tinggal di Surabaya Indoensia. Sebagai seorang bisnisman dan penggiat Museum seni
+              <b>Reno Halsamer</b> Adalah Pria yang lahir dan tinggal di Surabaya Indoensia. Sebagai seorang bisnisman dan penggiat Museum seni
               khususnya Topeng Indonesia, Sejak tahun 2015 di Surabaya, ditengah situasi yang dirasa mundurnya kecintaan masyarakat terhadap seni dan
               budaya, Reno Halsamer mencetuskan ide untuk menciptakan karakter animasi dengan mengkombinasikan topeng dan buah lemon. Selain topeng
               merupakan karya seni yang dibuat orisinil dari leluhur bangsa Indonesia, topeng juga diharapkan mampu mewakili wajah karakter masyarakan
