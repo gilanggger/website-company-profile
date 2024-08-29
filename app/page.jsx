@@ -59,7 +59,7 @@ export default function Home() {
             </p>
             <Button.Secondary className="uppercase w-fit font-bold shadow-md">See More</Button.Secondary>
           </div>
-          <div className="flex flex-col basis-1/2">
+          <div className="flex flex-col p-4 border-4 border-transparent active:border-red-500" style={{ position: "relative", zIndex: 10, boxSizing: "border-box" }}>
             <h2
               className={cn(
                 luckiest_guy.className,
@@ -68,7 +68,7 @@ export default function Home() {
               )}>
               Characters
             </h2>
-            <div className="z-10 flex justify-center items-center">
+            <div className="z-10 flex justify-center items-center ">
               <Placeholder height={400} width={350} color="#333" />
             </div>
             <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center">See More</Button.Secondary>
