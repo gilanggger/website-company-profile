@@ -10,7 +10,7 @@ const ProductPage = () => {
     <div className="flex flex-col">
       {/* Product 1 */}
       <div className="flex flex-row bg-[#1b1b1b] py-12">
-        <div className="container flex flex-col md:flex-row gap-x-6 px-8 lg:px-0">
+        <div className="container flex flex-col md:flex-row gap-x-6 px-8">
           <div className="flex flex-col items-center justify-center basis-4/12">
             <h2
               className={cn(
@@ -71,7 +71,7 @@ const ProductPage = () => {
 
       {/* Product 2 */}
       <div className="flex flex-row bg-[#d2e1f4] py-12">
-        <div className="container flex flex-col md:flex-row gap-x-6 px-8 lg:px-0">
+        <div className="container flex flex-col md:flex-row gap-x-6 px-8">
           <div className="flex flex-col items-center justify-center basis-4/12">
             <h2
               className={cn(
@@ -131,7 +131,7 @@ const ProductPage = () => {
 
       {/* Product 3 */}
       <div className="flex flex-row bg-[#d2f4d3] py-12">
-        <div className="container flex flex-col md:flex-row gap-x-6 px-8 lg:px-0">
+        <div className="container flex flex-col md:flex-row gap-x-6 px-8">
           <div className="flex flex-col items-center justify-center basis-4/12">
             <h2
               className={cn(
@@ -191,7 +191,7 @@ const ProductPage = () => {
 
       {/* Product 4 */}
       <div className="flex flex-row bg-[#f4d3e8] py-12">
-        <div className="container flex flex-col md:flex-row gap-x-6 px-8 lg:px-0">
+        <div className="container flex flex-col md:flex-row gap-x-6 px-8">
           <div className="flex flex-col items-center justify-center basis-4/12">
             <h2
               className={cn(
@@ -253,7 +253,7 @@ const ProductPage = () => {
 
       {/* Produk 5 */}
       <div className="flex flex-row bg-[#f4efd2] py-12">
-        <div className="container flex flex-col md:flex-row gap-x-6 px-8 lg:px-0">
+        <div className="container flex flex-col md:flex-row gap-x-6 px-8">
           <div className="flex flex-col items-center justify-center basis-4/12">
             <h2
               className={cn(
