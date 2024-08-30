@@ -68,7 +68,7 @@ export default function Home() {
               )}>
               Characters
             </h2>
-            <div className="z-10 flex justify-center items-center ">
+            <div className="z-10 flex justify-center items-center my-4">
               <Placeholder height={400} width={350} color="#333" />
             </div>
             <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center">See More</Button.Secondary>
