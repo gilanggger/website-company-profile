@@ -59,8 +59,8 @@ export default function Home() {
             </p>
             <Button.Secondary className="uppercase w-fit font-bold shadow-md">See More</Button.Secondary>
           </div>
-          <div className="flex flex-col p-4 border-4 border-transparent active:border-red-500" style={{ position: "relative", zIndex: 10, boxSizing: "border-box" }}>
-            <h2
+          <div className="flex flex-col basis-1/2"> 
+          <h2
               className={cn(
                 luckiest_guy.className,
                 "text-5xl text-center bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-transparent items-center",
