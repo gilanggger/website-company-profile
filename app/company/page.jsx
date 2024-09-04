@@ -2,6 +2,8 @@ import React from "react";
 import { cn } from "../../lib/utils";
 import { luckiest_guy } from "../fonts";
 import { Placeholder } from "placeholder";
+import { specialPartners } from "../../data/specialPartners"; 
+
 
 const CompanyPage = () => {
   return (
@@ -150,6 +152,32 @@ const CompanyPage = () => {
               putusan yang berpihak kepada estetika dan budaya kerja yang tech savvy, menyenangkan, transparan dan terukur. dengan pemikiran dan
               Kepiawayannya "Paman Minilemon" adalah julukan yang cocok untuk Heriyadi Natawijaya.
             </p>
+          </div>
+        </div>
+      </div>
+      {/* Special Partner */}
+      <div className="bg-[#fbe5db] py-20">
+        <div className="container">
+          <h2
+            className={cn(
+              luckiest_guy.className,
+              "text-center text-5xl md:text-6xl lg:text-7xl bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-transparent items-center text-wrap mb-10"
+            )}
+          >
+            Special Partner
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {specialPartners.map((partner, index) => (
+              <div key={index} className="text-center">
+                <img
+                  src={partner.image}
+                  alt={partner.name}
+                  className="mx-auto"
+                />
+                <p className="mt-4">{partner.name}</p>
+                <p className="text-sm font-semibold">{partner.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
