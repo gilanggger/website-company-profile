@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from "../lib/utils";
 import Image from "next/image";
 import { luckiest_guy } from "./fonts";
@@ -6,6 +8,8 @@ import Contact from "../components/contact";
 import { Placeholder } from "placeholder";
 import DividerBlue from "../components/ui/divider-blue";
 import Minggus from "../public/Minggus.png";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/css';
 
 export default function Home() {
   return (
@@ -88,17 +92,37 @@ export default function Home() {
           <h2 className={cn(luckiest_guy.className, "title drop-shadow-titleBlack")}>
             O<span className="text-6xl">ur product</span>
           </h2>
-          <div className="flex flex-row gap-4">
-            <div className="hidden md:flex">
+          <Splide
+            options={{
+              type: 'loop',
+              autoplay: true,
+              interval: 2000, 
+              pauseOnHover: false,
+              perPage: 3, 
+              gap: '1rem', 
+              breakpoints: {
+                768: {
+                  perPage: 1,
+                },
+              },
+            }}
+          >
+            <SplideSlide>
               <Placeholder height={420} width={300} color="#333" />
-            </div>
-            <div className="flex">
+            </SplideSlide>
+            <SplideSlide>
               <Placeholder height={420} width={300} color="#333" />
-            </div>
-            <div className="hidden md:flex">
+            </SplideSlide>
+            <SplideSlide>
               <Placeholder height={420} width={300} color="#333" />
-            </div>
-          </div>
+            </SplideSlide>
+            <SplideSlide>
+              <Placeholder height={420} width={300} color="#333" />
+            </SplideSlide>
+            <SplideSlide>
+              <Placeholder height={420} width={300} color="#333" />
+            </SplideSlide>
+          </Splide>
           <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center scale-125 mt-2">See More</Button.Secondary>
         </div>
       </div>
