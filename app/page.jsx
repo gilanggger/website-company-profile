@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from "../lib/utils";
 import Image from "next/image";
 import { luckiest_guy } from "./fonts";
@@ -6,6 +8,11 @@ import Contact from "../components/contact";
 import { Placeholder } from "placeholder";
 import DividerBlue from "../components/ui/divider-blue";
 import Minggus from "../public/Minggus.png";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+// import '@splidejs/splide/css';
+import '@splidejs/react-splide/css';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import MinilemonTitle from "@/public/title-picture/minilemon-1.png";
 import MessageTitle from "@/public/title-picture/message-1.png";
 import TreatmentTitle from "@/public/title-picture/treatment-1.png";
@@ -225,9 +232,7 @@ export default function Home() {
               <Placeholder height={420} width={300} color="#333" />
             </div>
           </div>
-          <Button.Secondary className="mt-2 w-fit scale-125 self-center font-bold uppercase shadow-md">
-            See More
-          </Button.Secondary>
+          <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center scale-125 mt-2">See More</Button.Secondary>
         </div>
       </div>
 
