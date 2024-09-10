@@ -9,7 +9,10 @@ import { Placeholder } from "placeholder";
 import DividerBlue from "../components/ui/divider-blue";
 import Minggus from "../public/Minggus.png";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/css';
+// import '@splidejs/splide/css';
+import '@splidejs/react-splide/css';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 export default function Home() {
   return (
@@ -95,32 +98,38 @@ export default function Home() {
           <Splide
             options={{
               type: 'loop',
-              autoplay: true,
-              interval: 2000, 
+              interval: 2000,
               pauseOnHover: false,
               perPage: 3, 
-              gap: '1rem', 
+              gap: '1rem',
+              drag: 'free',
+              focus: 'center',
               breakpoints: {
                 768: {
                   perPage: 1,
                 },
               },
+              AutoScroll: {
+                pauseOnHover: false,
+                speed: 2
+              },
             }}
+            extensions={{AutoScroll}}
           >
             <SplideSlide>
-              <Placeholder height={420} width={300} color="#333" />
+              <Placeholder height={420} width={300} color="#111" background="#d1fae5" />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder height={420} width={300} color="#333" />
+              <Placeholder background="#a7f3d0" height={420} width={300} color="#222" />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder height={420} width={300} color="#333" />
+              <Placeholder height={420} background="#6ee7b7" width={300} color="#333" />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder height={420} width={300} color="#333" />
+              <Placeholder height={420} width={300} color="#444" background="#34d399" />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder height={420} width={300} color="#333" />
+              <Placeholder height={420} background="#10b981" width={300} color="#333" />
             </SplideSlide>
           </Splide>
           <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center scale-125 mt-2">See More</Button.Secondary>
