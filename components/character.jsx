@@ -1,17 +1,15 @@
 "use client";
 
-import { Placeholder } from "placeholder";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import { cn } from "../lib/utils";
 import { luckiest_guy } from "../app/fonts";
-import { Assets } from "./ui/assets";
 import Slider from "./ui/slider";
 import Image from "next/image";
 
 const Character = ({
   id,
-  name1,
-  name2,
+  namePicture,
   fullName,
   description,
   image,
@@ -19,61 +17,20 @@ const Character = ({
   logic,
   creative,
   luck,
+  className,
 }) => {
-  const [valStrong, setValStrong] = useState(0);
-  const [valCreative, setValCreative] = useState(0);
-  const [valLuck, setValLuck] = useState(0);
-  const [valLogic, setValLogic] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (valStrong < strong) {
-        setValStrong(valStrong + 1);
-      } else {
-        clearInterval(interval);
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, [valStrong]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (valCreative < creative) {
-        setValCreative(valCreative + 1);
-      } else {
-        clearInterval(interval);
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, [valCreative]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (valLuck < luck) {
-        setValLuck(valLuck + 1);
-      } else {
-        clearInterval(interval);
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, [valLuck]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (valLogic < logic) {
-        setValLogic(valLogic + 1);
-      } else {
-        clearInterval(interval);
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, [valLogic]);
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    amount: 0.8,
+  });
 
   return (
     <div
       key={id}
+      ref={ref}
       className={cn(
-        "flex flex-col items-center justify-center",
+        "flex h-screen flex-col items-center justify-center lg:h-full",
         id === 1 ? "bg-[#FBEFEF]" : "",
         id === 2 ? "bg-[#FAF3E1]" : "",
         id === 3 ? "bg-[#E5FAE1]" : "",
@@ -84,31 +41,30 @@ const Character = ({
         id === 8 ? "bg-[#EBF9E8]" : "",
         id === 9 ? "bg-[#FBEFEF]" : "",
         id === 10 ? "bg-[#EAF9E8]" : "",
+        className,
       )}
     >
       <div className="container px-8 md:px-0">
-        <div
-          className={cn(
-            "flex max-w-6xl flex-col justify-center gap-6 px-6 py-8 md:flex-row",
-          )}
-        >
+        <div className="mx-8 flex max-w-6xl flex-col justify-center gap-6 py-8 md:mx-12 lg:mx-0 lg:flex-row">
           <div
             className={cn(
-              id % 2 === 0 ? "md:order-2" : "md:order-1",
-              "flex basis-4/12 flex-col items-center justify-center",
+              id % 2 === 0 ? "lg:order-2" : "lg:order-1",
+              "flex basis-4/12 flex-row items-center justify-center gap-4",
             )}
           >
-            <h2
-              className={cn(
-                luckiest_guy.className,
-                "mb-6 items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-4xl text-transparent md:hidden",
-                "drop-shadow-[0px_5px_0px_rgba(49,49,49,1)]",
-              )}
-            >
-              {name1}
-              <span className="">{name2}</span>
-            </h2>
-            <div className="relative h-[350px] w-[300px]">
+            {/* Mobile Design */}
+            <div className="order-2 flex basis-1/2 flex-col gap-6 lg:hidden lg:basis-0">
+              <div className="flex">
+                <Image src={namePicture} alt={fullName} />
+              </div>
+              <div className="flex flex-col gap-4">
+                <Slider value={isInView ? strong : 0}>Strong</Slider>
+                <Slider value={isInView ? creative : 0}>Creative</Slider>
+                <Slider value={isInView ? logic : 0}>Logic</Slider>
+                <Slider value={isInView ? luck : 0}>Luck</Slider>
+              </div>
+            </div>
+            <div className="relative h-[350px] w-[300px] basis-1/2 lg:basis-full">
               <Image
                 src={image}
                 alt={fullName}
@@ -119,53 +75,37 @@ const Character = ({
                 }}
               />
             </div>
-            {/* <Placeholder height={450} width={350} color="#d2def4" background="#333" /> */}
           </div>
           <div
             className={cn(
               "flex basis-8/12 flex-col tracking-wide",
               id % 2 === 0
-                ? "md:order-1 md:text-right"
-                : "md:order-2 md:text-left",
+                ? "lg:order-1 lg:text-right"
+                : "lg:order-2 lg:text-left",
             )}
           >
-            <h2
+            <div
               className={cn(
-                luckiest_guy.className,
-                "title drop-shadow-titleRed",
-                id === 1 ? "drop-shadow-[0px_5px_0px_rgba(118,40,40,1)]" : "",
-                id === 2 ? "drop-shadow-[0px_5px_0px_rgba(134,53,13,1)]" : "",
-                id === 3 ? "drop-shadow-[0px_5px_0px_rgba(1,68,76,1)]" : "",
-                id === 4 ? "drop-shadow-[0px_5px_0px_rgba(151,9,143,1)]" : "",
-                id === 5 ? "drop-shadow-[0px_5px_0px_rgba(11,78,132,1)]" : "",
-                id === 6 ? "drop-shadow-[0px_5px_0px_rgba(69,45,157,1)]" : "",
-                id === 7 ? "drop-shadow-[0px_5px_0px_rgba(152,38,3,1)]" : "",
-                id === 8 ? "drop-shadow-[0px_5px_0px_rgba(20,66,6,1)]" : "",
-                id === 9 ? "drop-shadow-[0px_5px_0px_rgba(126,20,20,1)]" : "",
-                id === 10 ? "drop-shadow-[0px_5px_0px_rgba(20,66,6,1)]" : "",
+                id % 2 === 0 ? "justify-end" : "justify-start",
+                "hidden lg:flex",
               )}
             >
-              {name1}
-              <span className="md:text-5xl xl:text-6xl">{name2}</span>
-            </h2>
+              <Image src={namePicture} alt={fullName} />
+            </div>
             <p className="leading-loose tracking-widest">{description}</p>
             <div
               className={cn(
-                "flex flex-col gap-6",
+                "hidden flex-col gap-6 lg:flex",
                 id % 2 === 0 ? "justify-end" : "justify-start",
               )}
             >
-              <div className="flex flex-row items-center justify-between gap-x-10 md:gap-x-24">
-                {/* Strong */}
-                <Slider value={valStrong}>Strong</Slider>
-                {/* Creative */}
-                <Slider value={valCreative}>Creative</Slider>
+              <div className="flex flex-row items-center justify-between gap-x-10 lg:gap-x-24">
+                <Slider value={isInView ? strong : 0}>Strong</Slider>
+                <Slider value={isInView ? creative : 0}>Creative</Slider>
               </div>
-              <div className="flex flex-row items-center justify-between gap-x-10 md:gap-x-24">
-                {/* Logic */}
-                <Slider value={valLogic}>Logic</Slider>
-                {/* Luck */}
-                <Slider value={valLuck}>Luck</Slider>
+              <div className="flex flex-row items-center justify-between gap-x-10 lg:gap-x-24">
+                <Slider value={isInView ? logic : 0}>Logic</Slider>
+                <Slider value={isInView ? luck : 0}>Luck</Slider>
               </div>
             </div>
           </div>
