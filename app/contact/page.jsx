@@ -8,15 +8,15 @@ import { FaInstagram, FaYoutube, FaTiktok, FaLemon } from "react-icons/fa6";
 const ContactPage = () => {
   return (
     <div className="flex flex-col">
-      {/* Contact */}
-      <div className="bg-[#1b1b1b] py-20">
+      {/* Contact  */}
+      <div className="bg-[#1b1b1b] h-[45vh] flex items-center">
         <div className="container flex flex-col gap-x-20 gap-y-10 p-6 md:flex-row">
           <div className="flex basis-1/2 flex-col gap-4">
             <h2
               className={cn(
                 luckiest_guy.className,
                 "items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent md:text-6xl lg:text-7xl",
-                "drop-shadow-[0px_4px_2px_rgba(47,48,46,1)]",
+                "drop-shadow-[0px_4px_2px_rgba(47,48,46,1)]"
               )}
             >
               Contact Us
@@ -54,14 +54,14 @@ const ContactPage = () => {
       </div>
 
       {/* Social */}
-      <div className="bg-[#d2d5f4] py-20">
+      <div className="bg-[#d2d5f4] h-[45vh] flex items-center">
         <div className="container flex flex-col justify-center gap-x-40 gap-y-10 p-6 md:flex-row">
           <div className="flex flex-col gap-y-6">
             <h2
               className={cn(
                 luckiest_guy.className,
                 "items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent md:text-6xl lg:text-7xl",
-                "drop-shadow-[0px_4px_2px_rgba(134,5,166,1)]",
+                "drop-shadow-[0px_4px_2px_rgba(134,5,166,1)]"
               )}
             >
               Official
@@ -92,7 +92,7 @@ const ContactPage = () => {
               className={cn(
                 luckiest_guy.className,
                 "items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent md:text-6xl lg:text-7xl",
-                "drop-shadow-[0px_4px_2px_rgba(134,5,166,1)]",
+                "drop-shadow-[0px_4px_2px_rgba(134,5,166,1)]"
               )}
             >
               Follow

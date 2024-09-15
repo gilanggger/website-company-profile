@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { cn } from "../lib/utils";
 import Image from "next/image";
@@ -8,23 +8,27 @@ import Contact from "../components/contact";
 import { Placeholder } from "placeholder";
 import DividerBlue from "../components/ui/divider-blue";
 import Minggus from "../public/Minggus.png";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-// import '@splidejs/splide/css';
-import '@splidejs/react-splide/css';
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import MinilemonTitle from "@/public/title-picture/minilemon-1.png";
 import MessageTitle from "@/public/title-picture/message-1.png";
 import TreatmentTitle from "@/public/title-picture/treatment-1.png";
 import ConceptTitle from "@/public/title-picture/concept-1.png";
 import PsychographicTitle from "@/public/title-picture/psychographic-1.png";
+import StoryTitle from "@/public/title-picture/story-2.png";
+import CharacterTitle from "@/public/title-picture/characters-1.png";
+import OurProductTitle from "@/public/title-picture/our-product-1.png";
+import CompanyTitle from "@/public/title-picture/company-1.png";
+import ContactUsTitle from "@/public/title-picture/contact-us-1.png";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center">
       {/* Section 1 */}
       <div className="w-full bg-gradient-to-b from-[#0a040e] to-[#3a1c52] text-[#d0dff4]">
-        <div className="container mt-20 flex max-w-xl flex-col px-8 sm:px-0">
+        <div className="container my-12 flex flex-col gap-4 px-10 lg:px-0">
           <p className="my-2 text-xl font-bold uppercase tracking-wide">
             welcome to
           </p>
@@ -144,29 +148,19 @@ export default function Home() {
         {/* <Story /> */}
         <div className="container my-10 flex flex-col gap-y-2">
           <div className="flex flex-row gap-12">
-            <div
-              className={cn(
-                luckiest_guy.className,
-                "title basis-1/2 drop-shadow-titlePurple",
-              )}
-            >
-              S<span className="text-6xl">tory</span>
+            <div className="basis-1/2">
+              <Image src={StoryTitle} alt="Story" />
             </div>
-            <p
-              className={cn(
-                luckiest_guy.className,
-                "title basis-1/2 text-center drop-shadow-titlePurple",
-              )}
-            >
-              C<span className="text-6xl">haracters</span>
-            </p>
+            <div className="flex basis-1/2 justify-center">
+              <Image src={CharacterTitle} alt="Character Minggus" />
+            </div>
           </div>
           <div className="flex flex-row gap-12">
             <div
               className={cn("flex basis-1/2 flex-col justify-between gap-y-12")}
             >
               <div className="flex h-full flex-col justify-between gap-y-12 font-medium leading-relaxed tracking-wider">
-                <p className="z-10">
+                <p className="z-10 mt-4">
                   Di dalam gua ditengah kebun lemon yang indah, hidup seorang
                   kakek (Djoyo) yang setiap hari membuat topeng berbentuk wajah
                   manusia. Kecintaannya dengan Nusantara membuat gua yang ia
@@ -181,8 +175,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className={cn("flex basis-1/2 justify-center")}>
-              <div className="relative h-[300px] w-[240px]">
+            <div className={cn("flex basis-1/2 items-center justify-center")}>
+              <div className="relative h-[285px] w-[228px]">
                 <Image
                   src={Minggus}
                   alt="Minggus"
@@ -212,24 +206,19 @@ export default function Home() {
 
       {/* Product */}
       <div className="hidden w-full flex-col bg-[#1b1b1b] lg:flex">
-        <div className="container my-12 flex flex-col items-center justify-center gap-8 px-10 md:px-0">
-          <h2
-            className={cn(
-              luckiest_guy.className,
-              "title drop-shadow-titleBlack",
-            )}
-          >
-            O<span className="text-6xl">ur product</span>
-          </h2>
+        <div className="container my-12 flex flex-col items-center justify-center gap-8 px-10 pt-6 md:px-0">
+          <div>
+            <Image src={OurProductTitle} alt="Our Product" />
+          </div>
           <Splide
             options={{
-              type: 'loop',
+              type: "loop",
               interval: 2000,
               pauseOnHover: false,
-              perPage: 3, 
-              gap: '1rem',
-              drag: 'free',
-              focus: 'center',
+              perPage: 3,
+              gap: "0.5rem",
+              drag: "free",
+              focus: "center",
               breakpoints: {
                 768: {
                   perPage: 1,
@@ -237,39 +226,64 @@ export default function Home() {
               },
               AutoScroll: {
                 pauseOnHover: false,
-                speed: 2
+                speed: 2,
               },
             }}
-            extensions={{AutoScroll}}
+            extensions={{ AutoScroll }}
           >
             <SplideSlide>
-              <Placeholder height={420} width={300} color="#111" background="#d1fae5" />
+              <Placeholder
+                height={420}
+                width={300}
+                color="#111"
+                background="#d1fae5"
+              />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder background="#a7f3d0" height={420} width={300} color="#222" />
+              <Placeholder
+                background="#a7f3d0"
+                height={420}
+                width={300}
+                color="#222"
+              />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder height={420} background="#6ee7b7" width={300} color="#333" />
+              <Placeholder
+                height={420}
+                background="#6ee7b7"
+                width={300}
+                color="#333"
+              />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder height={420} width={300} color="#444" background="#34d399" />
+              <Placeholder
+                height={420}
+                width={300}
+                color="#444"
+                background="#34d399"
+              />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder height={420} background="#10b981" width={300} color="#333" />
+              <Placeholder
+                height={420}
+                background="#10b981"
+                width={300}
+                color="#333"
+              />
             </SplideSlide>
           </Splide>
-          <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center scale-125 mt-2">See More</Button.Secondary>
+          <Button.Secondary className="mt-2 w-fit scale-125 self-center font-bold uppercase shadow-md">
+            See More
+          </Button.Secondary>
         </div>
       </div>
 
       {/* Company */}
       <div className="hidden w-full flex-col bg-[#f4e4d4] lg:flex">
         <div className="container my-12 flex flex-col gap-4 px-10 md:px-0">
-          <h2
-            className={cn(luckiest_guy.className, "title drop-shadow-titleRed")}
-          >
-            C<span className="text-6xl">ompany</span>
-          </h2>
+          <div>
+            <Image src={CompanyTitle} alt="Company" />
+          </div>
           <p className="leading-relaxed tracking-widest">
             PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
             Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
@@ -285,16 +299,10 @@ export default function Home() {
       {/* Contact Us */}
       <div className="hidden w-full flex-row bg-[#1b1b1b] lg:flex">
         <div className="container my-20 flex flex-col gap-12 px-10 md:px-0 lg:flex-row">
-          <div className="flex basis-1/2 flex-col items-center justify-center">
-            <h2
-              className={cn(
-                luckiest_guy.className,
-                "items-center bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent",
-                "drop-shadow-[0px_5px_0px_rgba(49,49,49,1)]",
-              )}
-            >
-              Contact Us
-            </h2>
+          <div className="flex basis-1/2 flex-col items-center justify-center gap-6">
+            <div>
+              <Image src={ContactUsTitle} alt="Contact Us" />
+            </div>
             <p className="text-2xl text-[#d2def4]">How can we help you?</p>
           </div>
           <div className="flex basis-1/2 flex-col">
