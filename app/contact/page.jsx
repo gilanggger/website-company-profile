@@ -8,7 +8,7 @@ import { FaInstagram, FaYoutube, FaTiktok, FaLemon } from "react-icons/fa6";
 const ContactPage = () => {
   return (
     <div className="flex flex-col">
-      {/* Contact */}
+      {/* Contact  */}
       <div className="bg-[#1b1b1b] h-[45vh] flex items-center">
         <div className="container flex flex-col gap-x-20 gap-y-10 p-6 md:flex-row">
           <div className="flex basis-1/2 flex-col gap-4">

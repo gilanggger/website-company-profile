@@ -24,7 +24,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center">
       {/* Section 1 */}
       <div className="w-full bg-gradient-to-b from-[#0a040e] to-[#3a1c52] text-[#d0dff4]">
-        <div className="container mt-20 flex max-w-xl flex-col px-8 sm:px-0">
+        <div className="container my-12 flex flex-col gap-4 px-10 md:px-0">
           <p className="my-2 text-xl font-bold uppercase tracking-wide">
             welcome to
           </p>
@@ -166,7 +166,7 @@ export default function Home() {
               className={cn("flex basis-1/2 flex-col justify-between gap-y-12")}
             >
               <div className="flex h-full flex-col justify-between gap-y-12 font-medium leading-relaxed tracking-wider">
-                <p className="z-10">
+                <p className="z-10 mt-4">
                   Di dalam gua ditengah kebun lemon yang indah, hidup seorang
                   kakek (Djoyo) yang setiap hari membuat topeng berbentuk wajah
                   manusia. Kecintaannya dengan Nusantara membuat gua yang ia
@@ -182,7 +182,7 @@ export default function Home() {
               </div>
             </div>
             <div className={cn("flex basis-1/2 justify-center")}>
-              <div className="relative h-[300px] w-[240px]">
+              <div className="relative h-[285px] w-[228px]">
                 <Image
                   src={Minggus}
                   alt="Minggus"
@@ -227,7 +227,7 @@ export default function Home() {
               interval: 2000,
               pauseOnHover: false,
               perPage: 3, 
-              gap: '1rem',
+              gap: '0.5rem',
               drag: 'free',
               focus: 'center',
               breakpoints: {

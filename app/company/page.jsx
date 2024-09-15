@@ -55,7 +55,7 @@ const CompanyPage = () => {
           >
             Visi
           </h2>
-          <p className="leading-relaxed text-[#aab3c3]">
+          <p className="leading-relaxed text-[#d1d9e6]">
             Sebagai anak bangsa yang baik dan cinta tanah air, PT Minilemon
             Nusantara mengambil tanggung jawab untuk berkontribusi memberikan
             edukasi dan harapan untuk kemajuan bangsa.
@@ -75,14 +75,14 @@ const CompanyPage = () => {
             Misi
           </h2>
           <ol className="list-decimal leading-relaxed text-[#aab3c3]">
-            <li className="text-[#aab3c3]">
+            <li className="text-[#d1d9e6]">
               Menciptakan produk kreatif dan eduktif yang bekelanjutan
             </li>
-            <li className="text-[#aab3c3]">
+            <li className="text-[#d1d9e6]">
               Membangung ekosistem yang mandiri, kreatif dan punya daya saing
               kuat di kanca internsional
             </li>
-            <li className="text-[#aab3c3]">
+            <li className="text-[#d1d9e6]">
               Membangun sistem integrasi dengan teknlogi yang friendly,
               transparan, terukur dengan jangkuan yang luas
             </li>

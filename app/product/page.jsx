@@ -31,7 +31,7 @@ const ProductPage = () => {
               Si Minilemon
             </h2>
             <Placeholder
-              height="500"
+              height="550"
               width="350"
               background="#333"
               color="#fff"
@@ -286,7 +286,7 @@ const ProductPage = () => {
               </h2>
             </div>
             <p>
-              Minilemin percaya bahwa pendidikan karakter anak tidak hanya
+              Minilemon percaya bahwa pendidikan karakter anak tidak hanya
               mengandalkan tontonan edukasi saja, akan tetapi dibutuhkan juga
               peran aktif orang tua dalam membimbing anak-anak mereka.
             </p>
